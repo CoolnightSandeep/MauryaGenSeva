@@ -18,7 +18,8 @@
             line-height: 1.6;
             background-color: #f4f4f4;
             color: #333;
-            padding: 10px; /* Added padding to avoid content sticking to the edges */
+            padding: 10px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         /* Global Styling */
@@ -33,12 +34,15 @@
             padding: 30px 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideInFromTop 1s ease-out;
         }
 
         header h1 {
             font-size: 3em;
             margin: 0;
             letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeInHeader 1s forwards;
         }
 
         nav ul {
@@ -59,12 +63,15 @@
             font-size: 1.4em;
             font-weight: bold;
             text-transform: uppercase;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeInNavLinks 1.5s forwards;
         }
 
         nav ul li a:hover {
             color: #d5b97e; /* Gold color for hover */
             text-decoration: underline;
+            transform: scale(1.1); /* Slight zoom on hover */
         }
 
         /* Section Styling */
@@ -75,6 +82,8 @@
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards;
         }
 
         section:hover {
@@ -105,6 +114,8 @@
             padding-left: 20px;
             position: relative;
             margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s forwards;
         }
 
         ul li:before {
@@ -122,10 +133,11 @@
             background-color: #1a1a1a;
             color: #fff;
             padding: 20px;
-            position: relative; /* Changed from fixed to relative */
-            margin-top: 50px; /* Added margin to ensure no overlap */
+            position: relative;
+            margin-top: 50px;
             width: 100%;
             font-size: 1.1em;
+            animation: fadeInFooter 1s forwards;
         }
 
         /* Contact Address Style */
@@ -158,6 +170,66 @@
                 padding: 10px;
             }
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInHeader {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInNavLinks {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInFooter {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 
@@ -177,9 +249,7 @@
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Welcome to <strong>Maurya Gen Seva Kendra</strong>, where quality meets excellence. We are committed to delivering premium services and products that cater to your every need. Our mission is to make your life easier with reliable solutions delivered with utmost professionalism. Join us and experience the luxury of convenience!</p>
-        <!-- Optional Image for About Us -->
-        <!-- <img src="about_image.jpg" alt="About Image" style="max-width: 100%; height: auto;"> -->
+        <p>Welcome to <strong>Maurya Gen Seva Kendra</strong>, where quality meets excellence. We are committed to sell mobile accesories that cater to your every need. Our mission is to make your life easier with our available solutions delivered with outmost professionalism. Join us and experience the luxury of convenience!</p>
     </section>
 
     <section id="services">
@@ -189,12 +259,10 @@
             <li>जाति प्रमाण पत्र</li>
             <li>निवास प्रमाण पत्र</li>
             <li>किसान पंजीकरण</li>
-            <li>वाहन बिमा केंन्द्र</li>
             <li>पैन कार्ड</li>
             <li>बिजली बिल भुगतान</li>
             <li>राशन कार्ड प्रिंट</li>
             <li>शादी अनुदान</li>
-            <li>वाहन टैक्स</li>
             <li>खसरा खतौनी</li>
             <li>पारिवारिक लाभ</li>
             <li>बैंकिंग सेवा</li>
@@ -204,17 +272,19 @@
             <li>पेंशन ऑनलाइन</li>
             <li>आधार कार्ड प्रिंट</li>
             <li>Recharge</li>
+            <li>Driving License</li>
         </ul>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2>Get In Touch</h2>
         <p>Visit us at:</p>
         <address>
             Maurya Gen Seva Kendra<br>
-            Address Line 1, City, State, Zip Code<br>
+            Village and post goriyabad <br>
+            District amethi U.P. india <br>
             Phone: +91 95807 73713<br>
-            Email: contact@mauryagen.com
+            Email: sandeepkumar58189@gamil.com
         </address>
     </section>
 
